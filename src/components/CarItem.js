@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { BsHeartFill } from 'react-icons/bs';
-import tesla_model_s from '../imgs/tesla_model_s.jpg';
 
 export default function CarItem({ car, handleFavourite }) {
-  console.log(car.price);
+  
   return (
 
     <Card style={{ width: '18rem' }} className="m-2">
@@ -20,7 +19,6 @@ export default function CarItem({ car, handleFavourite }) {
           <BsHeartFill pl-4 size={20} color={car.fav === 'Yes' ? 'red' : 'gray'} title="Add to Favourite" onClick={handleFavourite} />
         </h2>
         <h4 className="about-_info">
-        <span className="badge badge-price">{ car.price }</span>
           <span className="badge badge-transmission">{ car.transmission }</span>
           {' '}
           {' '}
