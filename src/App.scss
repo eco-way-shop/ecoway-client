@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&display=swap");
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  color: #373737;
+  background-color: #b9b6b6;
+}
+
+.container {
+  max-width: 768px !important;
+  padding: 0 !important;
+}
+
+.slack {
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  height: 400px;
+  background: url("./imgs/head_image.jpg") bottom center no-repeat;
+  padding: 30px;
+
+  &-content {
+    width: 215px;
+    color: #fff;
+
+    &__title {
+      font-size: 22px;
+      font-weight: 700;
+      text-shadow: 1px 2px 2px rgba($color: #000, $alpha: 0.6);
+    }
+
+    &__desc {
+      font-weight: 100;
+      text-shadow: 0 1px 1px rgba($color: #000, $alpha: 0.4);
+    }
+  }
+}
+
+.logo {
+  width: 120px;
+}
+
+.about-section {
+  padding: 10px;
+  background-color: #fff;
+
+  &__sub {
+    text-transform: uppercase;
+    color: #b9b6b6;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  &__primary,
+  &__left-title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 300;
+  }
+
+  &__left-title {
+    text-align: left;
+  }
+
+  &__desc {
+    font-weight: 100;
+    font-size: 14px;
+    color: #000;
+  }
+}
+
+.feature-section {
+  background-color: #e8f0ff;
+}
+
+.call-action {
+  height: 150px;
+  background: url("./imgs/call_action.jpg") top center no-repeat;
+  color: #e8f0ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  color: #b9b6b6;
+  text-align: center;
+  font-size: small;
+}
+.submit,
+.btn-oval {
+  font-weight: 500 !important;
+  border-radius: 20px !important;
+  background-color: #00f54b !important;
+  border-color: #00f54b !important;
+  color: #000 !important;
+}
+
+.btn-menu {
+  font-weight: 500 !important;
+  border-radius: 35px !important;
+  background-color: #00f54b !important;
+  border-color: #00f54b !important;
+  color: #000 !important;
+  padding: 5px 8px;
+}
+
+.white {
+  color: #fff !important;
+}
+
+.login-box {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative;
+}
+
+.login-box::after {
+  content: "";
+  background: url("./imgs/head_image.jpg") bottom center no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.form-control {
+  border-radius: 20px !important;
+  padding: 5px 10px !important;
+}
+
+.modal-popup {
+  overflow: hidden;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.badge-color,
+.badge-transmission,
+.badge-odometer,
+.badge-ac,
+.badge-battery,
+.badge-price {
+  background-color: rgb(76, 91, 79);
+  color:#fff;
+  font-size: small;
+}
+
+.text-danger {
+  color: #000 !important;
+}
+
+.back_link{
+  padding-left: 6rem;
+  padding-right: 6rem;
+  text-align: center;
+  color: #fff !important;
+}
+
+.date-label,
+.phone-label{
+  padding-top: 6px;
+  color: #fff !important;
+  font-size: medium;
+}
+
+.back{
+  color: #000 !important;
+  padding-left: 6rem;
+  padding-right: 2rem;
+}
+.carTitle {
+  font-weight: 600 !important;
+
+  font-size: x-large;
+  color: #000 !important;
+}
+.about_section{
+align-self: start;
+padding: 10px;
+background-color: #fff;
+
+&_info {
+  text-transform: uppercase;
+  color: #b9b6b6;
+  text-align: center;
+  font-size: 13px;
+}
+&__primary,
+&__left-title {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+&__left-title {
+  text-align: left;
+}
+
+&__desc {
+  font-weight: 100;
+  font-size: 14px;
+  color: #000;
+}
+
+
+}
+.btn-oval-car {
+  background-color: rgb(57, 196, 57);
+  color:#fff;
+  font-weight: 500 !important;
+  border-radius: 20px !important;
+}
+.navbar-toggler-icon {
+background-image: url('/imgs/menu.png') !important;
+}
+.navbar-toggler{
+  border-color: #fff !important;
+  color: #fff !important;
+}
+
+.form-control {
+  border-radius: 20px !important;
+  padding: 5px 10px !important;
+}
+.formUsername,
+.formDate,
+.formPhone,
+.form-group {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.driveTitle{
+  padding-top: 20px;
+  font-weight: 600 !important;
+  text-align: center;
+  font-size: x-large;
+  color: #fff !important;
+}
+.driveDesc {
+  text-align: center;
+  font-weight: 100;
+  font-size: medium;
+  color: #fff;
+  padding-bottom: 1rem;
+}
+
+.submit{
+  font-weight: 500 !important;
+  border-radius: 20px !important;
+  background-color: #00f54b !important;
+  border-color: #00f54b !important;
+  color: #000 !important;
+  width: 100px;
+  height: 40px;
+  align-content: left;
+}
+
+.drive-flex{
+ padding-top: 1rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
