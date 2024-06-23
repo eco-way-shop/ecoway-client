@@ -16,7 +16,7 @@ export default function Navigation() {
         <Nav className="mr-auto" />
         <Nav>
           {
-            token === undefined || token === 'undefined'
+            token === undefined || token === 'undefined' && username != "admin"
               ? (
                 <>
                   <Link className="nav-link white" to="/login">Увійти</Link>
@@ -28,7 +28,7 @@ export default function Navigation() {
               : (
                 <>
                   <Link className="nav-link white" to="/cars">Автомобілі</Link>
-                  <Link className="nav-link white" to="/favourites">Вподобані</Link>
+                  <Link className="nav-link white" to="/add_car">Додати автомобіль</Link>
                   <Link className="nav-link white" to="/logout">
                     Вихід
                   </Link>
