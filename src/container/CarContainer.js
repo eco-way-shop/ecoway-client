@@ -42,7 +42,7 @@ function CarContainer({ carData, getCars }) {
     <h2 className="text-center pt-5">
       <ScaleLoader size={16} color="orange" />
     </h2>
-  ) : token === undefined || token === 'undefined' ? (
+  ) : token === undefined || token === 'undefined' || token === null ? (
     <h2 className="text-center pt-5 white">
       { carData.error }
       <Redirect to="/login" />
