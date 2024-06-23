@@ -10,16 +10,7 @@ import Cars from './pages/Cars';
 import CarItemDetail from './pages/CarItemDetail';
 import Favourites from './pages/Favourites';
 import AddCar from './pages/AddCar';
-import { useHistory } from 'react-router-dom';
 
-
-const Logout = () => {
-  
-  localStorage.removeItem('CarRentalsToken');
-  const history = useHistory();
-  history.push('/');
-
-};
 
 const Routes = () => (
   
@@ -33,7 +24,15 @@ const Routes = () => (
       <Route exact path="/register" component={Register} />
       <Route exact path="/cars/:id" component={CarItemDetail} />
       <Route exact path="/add_car" component={AddCar} />
-      <Route exact path="/logout" element={() => Logout()} />
+      <Route
+        exact
+        path="/logout"
+        render={() => {
+          localStorage.setItem('CarRentalsToken', undefined);
+          localStorage.setItem('CarRentalsUser', '');
+          window.location.href = '/';
+        }}
+      />
     </Switch>
   </BrowserRouter>
 );
