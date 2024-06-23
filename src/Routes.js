@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter, Switch, Route,
+  BrowserRouter, Switch, Route,useNavigate 
 } from 'react-router-dom';
 import App from './pages/App';
 import Login from './pages/Login';
@@ -12,6 +12,7 @@ import Favourites from './pages/Favourites';
 import AddCar from './pages/AddCar';
 
 const handleLogout = () => {
+  localStorage.removeItem('your_auth_token_key'); 
   const navigate = useNavigate();
   navigate('/'); // Redirect to homepage after logout
 };
