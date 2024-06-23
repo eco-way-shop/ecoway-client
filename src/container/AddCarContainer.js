@@ -33,16 +33,6 @@ function AddCar({ addCar, carData }) {
       imageUrl: imageUrl.current.value,
       ac: ac.current.checked, // Get boolean value from checkbox
     };
-
-    onSubmit(newCar)
-      .then(() => {
-        // Handle successful car creation (e.g., redirect to car list)
-        console.log('Car added successfully!');
-      })
-      .catch((error) => {
-        console.error('Error adding car:', error);
-        // Handle errors during car creation (show error message)
-      });
   };
 
   // ... rest of the component (form elements & styling)
