@@ -29,15 +29,6 @@ const Routes = () => (
       <Route exact path="/cars/:id" component={CarItemDetail} />
       <Route exact path="/add_car" component={AddCar} />
       <Route exact path="/logout" element={() => handleLogout()} />
-      <Route
-        exact
-        path="/logout"
-        render={() => {
-          localStorage.setItem('CarRentalsToken', undefined);
-          localStorage.setItem('CarRentalsUser', '');
-          window.location.href = '/login';
-        }}
-      />
     </Switch>
   </BrowserRouter>
 );
