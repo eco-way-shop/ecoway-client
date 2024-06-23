@@ -36,8 +36,8 @@ export default function Navigation() {
       ) : (
         <>
           <Link className="nav-link white" to="/cars">Автомобілі</Link>
-                  <Link className="nav-link white" to="/favourites">Вподобані</Link>
-                  <Link className="nav-link white" to="/logout"> </Link>
+          <Link className="nav-link white" to="/favourites">Вподобані</Link>
+          <Link className="nav-link white" to="/logout">Вихід</Link>
         </>
       )}
     </>
