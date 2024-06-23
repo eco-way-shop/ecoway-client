@@ -12,7 +12,7 @@ import Favourites from './pages/Favourites';
 import AddCar from './pages/AddCar';
 
 const handleLogout = () => {
-  // Perform logout logic here (e.g., remove auth token from localStorage)
+  const navigate = useNavigate();
   navigate('/'); // Redirect to homepage after logout
 };
 
