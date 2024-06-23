@@ -15,26 +15,32 @@ export default function Navigation() {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto" />
         <Nav>
-          {
-            token === undefined || token === 'undefined' && username != "admin"
-              ? (
-                <>
-                  <Link className="nav-link white" to="/login">Увійти</Link>
-                  <Link className="nav-link" to="/register">
-                    <span className="btn-menu">Зареєструватись</span>
-                  </Link>              
-                </>
-              )
-              : (
-                <>
-                  <Link className="nav-link white" to="/cars">Автомобілі</Link>
-                  <Link className="nav-link white" to="/add_car">Додати автомобіль</Link>
-                  <Link className="nav-link white" to="/logout">
-                    Вихід
-                  </Link>
-                </>
-              )
-          }
+        {token === undefined || token === 'undefined' ? (
+    <>
+    <Link className="nav-link white" to="/login">Увійти</Link>
+    <Link className="nav-link" to="/register">
+      <span className="btn-menu">Зареєструватись</span>
+    </Link>              
+  </>
+  ) : (
+    <>
+      {username === 'admin' ? (
+       <>
+       <Link className="nav-link white" to="/cars">Автомобілі</Link>
+       <Link className="nav-link white" to="/add_car">Додати автомобіль</Link>
+       <Link className="nav-link white" to="/logout">
+         Вихід
+       </Link>
+     </>
+      ) : (
+        <>
+          <Link className="nav-link white" to="/cars">Автомобілі</Link>
+                  <Link className="nav-link white" to="/favourites">Вподобані</Link>
+                  <Link className="nav-link white" to="/logout"> </Link>
+        </>
+      )}
+    </>
+  )}
         </Nav>
       </Navbar.Collapse>
     </Navbar>
