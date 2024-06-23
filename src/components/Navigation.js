@@ -15,7 +15,8 @@ export default function Navigation() {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto" />
         <Nav>
-        {token === undefined || token === 'undefined' ? (
+        {
+        token === undefined || token === 'undefined' || token === null ? (
     <>
     <Link className="nav-link white" to="/login">Увійти</Link>
     <Link className="nav-link" to="/register">
@@ -41,6 +42,7 @@ export default function Navigation() {
       )}
     </>
   )}
+
         </Nav>
       </Navbar.Collapse>
     </Navbar>
