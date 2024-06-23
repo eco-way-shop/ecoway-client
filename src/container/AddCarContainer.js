@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 function AddCar({ addCar, carData }) {
-    const make = useRef('');
+  const make = useRef('');
   const model = useRef('');
   const year = useRef('');
   const color = useRef('');
@@ -34,7 +34,7 @@ function AddCar({ addCar, carData }) {
       ac: ac.current.checked, // Get boolean value from checkbox
     };
 
-    addCar(newCar)
+    onSubmit(newCar)
       .then(() => {
         // Handle successful car creation (e.g., redirect to car list)
         console.log('Car added successfully!');
