@@ -11,8 +11,13 @@ import CarItemDetail from './pages/CarItemDetail';
 import Favourites from './pages/Favourites';
 import AddCar from './pages/AddCar';
 
+const handleLogout = () => {
+  // Perform logout logic here (e.g., remove auth token from localStorage)
+  navigate('/'); // Redirect to homepage after logout
+};
 
 const Routes = () => (
+  
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={App} />
@@ -23,6 +28,7 @@ const Routes = () => (
       <Route exact path="/register" component={Register} />
       <Route exact path="/cars/:id" component={CarItemDetail} />
       <Route exact path="/add_car" component={AddCar} />
+      <Route exact path="/logout" element={() => handleLogout()} />
       <Route
         exact
         path="/logout"
