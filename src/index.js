@@ -7,7 +7,7 @@ import Routes from './Routes';
 import './App.scss';
 import store from './redux/store';
 
-axios.defaults.baseURL = 'https://ecoway-server.onrender.com/';
+axios.defaults.baseURL = 'https://ecoway-server.onrender.com';
 axios.defaults.headers.common.Authorization = `Bearer ${localStorage.getItem('CarRentalsToken')}`;
 
 ReactDOM.render(
