@@ -10,6 +10,13 @@ import store from './redux/store';
 axios.defaults.baseURL = 'https://ecoway-server.onrender.com';
 axios.defaults.headers.common.Authorization = `Bearer ${localStorage.getItem('CarRentalsToken')}`;
 
+
+if (!localStorage.getItem('CarRentalsToken')) {
+  localStorage.setItem('CarRentalsToken', undefined);
+  localStorage.setItem('CarRentalsUser', '');
+  window.location.reload();
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
