@@ -25,7 +25,7 @@ body {
   &-content {
     width: 215px;
     color: #fff;
-
+    
     &__title {
       font-size: 22px;
       font-weight: 700;
@@ -52,6 +52,8 @@ body {
     color: #b9b6b6;
     text-align: center;
     font-size: 13px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   &__primary,
@@ -59,6 +61,8 @@ body {
     text-align: center;
     font-size: 25px;
     font-weight: 300;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   &__left-title {
@@ -69,6 +73,8 @@ body {
     font-weight: 100;
     font-size: 14px;
     color: #000;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -85,6 +91,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+.call-action-text{
+width: 600px;
+}
 
 .footer {
   color: #b9b6b6;
@@ -93,13 +102,17 @@ body {
 }
 .submit,
 .btn-oval {
+  margin-left: 30px;
   font-weight: 500 !important;
   border-radius: 20px !important;
   background-color: #00f54b !important;
   border-color: #00f54b !important;
   color: #000 !important;
 }
-
+.img-fluid{
+  padding-left: 30px;
+    padding-right: 30px;
+}
 .btn-menu {
   font-weight: 500 !important;
   border-radius: 35px !important;
@@ -265,7 +278,7 @@ background-image: url('/imgs/menu.png') !important;
   background-color: #00f54b !important;
   border-color: #00f54b !important;
   color: #000 !important;
-  width: 100px;
+  width: fit-content;
   height: 40px;
   align-content: left;
 }
@@ -274,4 +287,53 @@ background-image: url('/imgs/menu.png') !important;
  padding-top: 1rem;
   padding-left: 6rem;
   padding-right: 6rem;
+}
+
+.add-car-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Add some spacing between form rows */
+}
+.add-car-title{
+  align-self: center;
+    font-size: 22px;
+    font-weight: 700;
+    text-shadow: 1px 2px 2px rgba($color: #000, $alpha: 0.6);
+}
+.add-car-subtitle{
+  align-self: center;
+    font-weight: 100;
+    text-shadow: 0 1px 1px rgba($color: #000, $alpha: 0.4);
+}
+
+.form-row {
+  display: flex; /* Make each row a flexbox container */
+  align-items: center; /* Align items vertically in the row */
+}
+
+.form-group {
+  display: flex; /* Make each form group a flexbox container */
+  gap: 0.5rem; /* Add some spacing between label and input */
+}
+
+.form-label {
+  width: 30%; /* Set label width */
+  align-self: center;
+  text-align: left; /* Align labels to the left */
+}
+.ac-check,
+.input {
+  width: 70%;
+  align-self: center;
+  display: flex;
+  align-content: center;
+  flex: 1; /* Allow inputs to grow and fill remaining space */
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-input input,
+.form-input textarea {
+  width: 100%; /* Set input width to 100% of its container */
 }
