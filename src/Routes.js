@@ -10,8 +10,9 @@ import Cars from './pages/Cars';
 import CarItemDetail from './pages/CarItemDetail';
 import Favourites from './pages/Favourites';
 import AddCar from './pages/AddCar';
+import { useNavigate } from 'react-router-dom';
 
-const handleLogout = () => {
+const Logout = () => {
   
   localStorage.removeItem('CarRentalsToken');
 
@@ -32,7 +33,7 @@ const Routes = () => (
       <Route exact path="/register" component={Register} />
       <Route exact path="/cars/:id" component={CarItemDetail} />
       <Route exact path="/add_car" component={AddCar} />
-      <Route exact path="/logout" element={() => handleLogout()} />
+      <Route exact path="/logout" element={() => Logout()} />
     </Switch>
   </BrowserRouter>
 );
