@@ -10,14 +10,14 @@ import Cars from './pages/Cars';
 import CarItemDetail from './pages/CarItemDetail';
 import Favourites from './pages/Favourites';
 import AddCar from './pages/AddCar';
-import { useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+
 
 const Logout = () => {
   
   localStorage.removeItem('CarRentalsToken');
-
-  const navigate = useNavigate();
-  navigate('/');
+  const history = useHistory();
+  history.push('/');
 
 };
 
