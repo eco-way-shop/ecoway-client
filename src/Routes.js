@@ -9,7 +9,8 @@ import Register from './pages/Register';
 import Cars from './pages/Cars';
 import CarItemDetail from './pages/CarItemDetail';
 import Favourites from './pages/Favourites';
-// import TestDrivesContainer from './container/TestDrivesContainer';
+import AddCar from './pages/AddCar';
+
 
 const Routes = () => (
   <BrowserRouter>
@@ -21,6 +22,7 @@ const Routes = () => (
       <Route exact path="/login" component={Login} />
       <Route exact path="/register" component={Register} />
       <Route exact path="/cars/:id" component={CarItemDetail} />
+      <Route exact path="/add_car" component={AddCar} />
       <Route
         exact
         path="/logout"
