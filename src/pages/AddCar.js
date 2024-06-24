@@ -5,7 +5,8 @@ import AddCarContainer from '../container/AddCarContainer';
 
 export default function AddCar() {
   return (
-    <Container>
+    <Container className="bg-dark">
+      <Navigation />
       <AddCarContainer />
       <Footer />
     </Container>
