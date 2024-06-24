@@ -41,7 +41,7 @@ function LoginContainer({ logUserIn, userData }) {
       </>
     )
     : (
-      <Redirect to="/" />
+      <Redirect to="/cars" />
     );
 }
 
