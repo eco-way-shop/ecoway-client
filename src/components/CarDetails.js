@@ -44,7 +44,7 @@ export default function CarDetails({ car }) {
           {' '}
         </h4>
         
-        <h6 className="about-section_desc pb-4">
+        <h6 className="about-section_desc p-4">
         {car.desc}
         </h6>
         <hr />
