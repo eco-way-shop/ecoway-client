@@ -4,15 +4,15 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const TestDriveForm = ({ memberId, carId, onSubmitSuccess, onSubmitError }) => {
-  const [phone, setPhone] = useState('');
-  const [date, setDate] = useState('');
+  const [phone_number, setPhone] = useState('');
+  const [desired_time, setDate] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (!phone || !date) {
+    if (!phone_number || !desired_time) {
       setError('Please fill in all required fields (Phone and Date)');
       return;
     }
@@ -24,8 +24,8 @@ const TestDriveForm = ({ memberId, carId, onSubmitSuccess, onSubmitError }) => {
       const response = await axios.post('/test_drive', {
         member_id: memberId,
         car_id: carId,
-        phone,
-        date,
+        phone_number,
+        desired_time,
       });
 
       if (response.data.success) {
@@ -52,9 +52,9 @@ const TestDriveForm = ({ memberId, carId, onSubmitSuccess, onSubmitError }) => {
         <input
           type="tel"
           className="form-control"
-          id="phone"
-          name="phone"
-          value={phone}
+          id="phone_number"
+          name="phone_number"
+          value={phone_number}
           onChange={(event) => setPhone(event.target.value)}
           required
         />
@@ -62,11 +62,11 @@ const TestDriveForm = ({ memberId, carId, onSubmitSuccess, onSubmitError }) => {
       <div className="form-group">
         <label className="date-label" htmlFor="date">Бажана дата тест-драйву</label>
         <input
-          type="date"
+          type="desired_time"
           className="form-control"
-          id="date"
-          name="date"
-          value={date}
+          id="desired_time"
+          name="desired_time"
+          value={desired_time}
           onChange={(event) => setDate(event.target.value)}
           required
         />

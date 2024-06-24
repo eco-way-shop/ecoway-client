@@ -15,7 +15,7 @@ export default function CarItem({ car, handleFavourite }) {
       <section className="about-section">
         <h2 className="carTitle pb-4 pr-4">
           { car.name }
-          <BsHeartFill pl-4 size={20} color={car.fav === 'Yes' ? 'red' : 'gray'} title="Add to Favourite" onClick={handleFavourite} />
+          <BsHeartFill className='like' pl-4 size={20} color={car.fav === 'Yes' ? 'red' : 'gray'} title="Add to Favourite" onClick={handleFavourite} />
         </h2>
         <h4 className="about-_info">
           <span className="badge badge-transmission">{ car.transmission }</span>
