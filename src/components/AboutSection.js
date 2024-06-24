@@ -21,7 +21,7 @@ export default function AboutSection() {
           вартості бензину і газу, погіршення екології.
           </p>
           <p>
-            <a href="/register" className="btn btn-oval">
+            <a href="/cars" className="btn btn-oval">
               Дізнатись більше
             </a>
           </p>
