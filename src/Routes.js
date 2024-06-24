@@ -29,7 +29,7 @@ const Routes = () => (
         render={() => {
           localStorage.setItem('CarRentalsToken', undefined);
           localStorage.setItem('CarRentalsUser', '');
-          window.location.href = '/login';
+          window.location.href = '/';
         }}
       />
     </Switch>
