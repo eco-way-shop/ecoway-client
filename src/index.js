@@ -8,6 +8,7 @@ import './App.scss';
 import store from './redux/store';
 
 axios.defaults.baseURL = 'https://ecoway-server.onrender.com';
+console.log(localStorage);
 axios.defaults.headers.common.Authorization = `Bearer ${localStorage.getItem('CarRentalsToken')}`;
 
 
