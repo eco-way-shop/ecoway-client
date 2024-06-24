@@ -13,7 +13,7 @@ export default function Header() {
           Чудові попозиції екологічних електро автомобілів за хорошими цінами
         </p>
         <p>
-          <Link className="btn btn-oval" to="/register">Переглянути</Link>
+          <Link className="btn btn-oval" to="/cars">Переглянути</Link>
         </p>
       </div>
     </header>
