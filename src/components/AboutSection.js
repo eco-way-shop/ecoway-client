@@ -1,8 +1,12 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import ride from '../imgs/ride.jpg';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { useSelector } from 'react-redux';
 
 export default function AboutSection() {
+  const token = useSelector(state => state.user.token);
+
   return (
     <section className="about-section">
       {/* <h4 className="about-section__sub"></h4> */}
@@ -21,9 +25,23 @@ export default function AboutSection() {
           вартості бензину і газу, погіршення екології.
           </p>
           <p>
+          {
+            token === undefined || token === 'undefined' && token == null 
+              ? (
+                <> 
           <Link className="btn btn-oval" to="/login">
               Дізнатись більше
             </Link>
+              </>
+              ) : (
+                <> 
+          <Link className="btn btn-oval" to="/cars">
+              Дізнатись більше
+            </Link>
+            </>
+              )
+            }
+
           </p>
         </Col>
         <Col sm={6}>
