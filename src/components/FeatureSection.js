@@ -18,9 +18,9 @@ export default function FeatureSection() {
             Тест-драйв у зручний для вас час.
           </p>
           <p>
-            <a href="/login" className="btn btn-oval">
+          <Link className="btn btn-oval" to="/login">
               Переглянути
-            </a>
+            </Link>
           </p>
         </Col>
       </Row>
