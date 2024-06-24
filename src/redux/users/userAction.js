@@ -25,7 +25,7 @@ export const loginUser = data => function (dispatch) {
     .then(response => {
       const { data } = response;
       dispatch(userLoginSuccess(data));
-      window.location.href = '/';
+      window.location.href = '/cars';
     })
     .catch(error => {
       dispatch(userLoginFailure(error.response.data.error));

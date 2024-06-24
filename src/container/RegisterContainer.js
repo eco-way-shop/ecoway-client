@@ -41,7 +41,7 @@ function RegisterContainer({ userData, signupUser }) {
         <FormElement username={username} password={password} type="Зареєструватись" handleSubmit={handleRegistration} />
       </>
     ) : (
-      <Redirect to="/" />
+      <Redirect to="/cars" />
     );
 }
 

@@ -13,7 +13,6 @@ import AddCar from './pages/AddCar';
 
 
 const Routes = () => (
-  
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={App} />
@@ -30,7 +29,7 @@ const Routes = () => (
         render={() => {
           localStorage.setItem('CarRentalsToken', undefined);
           localStorage.setItem('CarRentalsUser', '');
-          window.location.href = '/';
+          window.location.href = '/login';
         }}
       />
     </Switch>

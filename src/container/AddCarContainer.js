@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 function AddCar({ addCar, carData }) {
-  const make = useRef('');
+    const make = useRef('');
   const model = useRef('');
   const year = useRef('');
   const color = useRef('');
@@ -33,6 +33,16 @@ function AddCar({ addCar, carData }) {
       imageUrl: imageUrl.current.value,
       ac: ac.current.checked, // Get boolean value from checkbox
     };
+
+    addCar(newCar)
+      .then(() => {
+        // Handle successful car creation (e.g., redirect to car list)
+        console.log('Car added successfully!');
+      })
+      .catch((error) => {
+        console.error('Error adding car:', error);
+        // Handle errors during car creation (show error message)
+      });
   };
 
   // ... rest of the component (form elements & styling)

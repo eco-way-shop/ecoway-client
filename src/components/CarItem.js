@@ -14,28 +14,18 @@ export default function CarItem({ car, handleFavourite }) {
         
       <section className="about-section">
         <h2 className="carTitle pb-4 pr-4">
-          { car.name } 
-          {'  '}
+          { car.name }
           <BsHeartFill pl-4 size={20} color={car.fav === 'Yes' ? 'red' : 'gray'} title="Add to Favourite" onClick={handleFavourite} />
         </h2>
         <h4 className="about-_info">
           <span className="badge badge-transmission">{ car.transmission }</span>
-          {' '}
-          {' '}
           <span className="badge badge-ac badge-success">
-           Клімат контроль
-           {' '}
-          </span>
-          {' '}  
+           {car.ac === 'Yes'? "Клімат контроль" : "Не має клімат контролю"}
+          </span> 
           <span className="badge badge-odometer">{ car.odometer + " км"}</span>
-          {' '}
           <span className="badge badge-color">{ car.color}</span>
-          {' '}
           <span className="badge badge-battery">{ car.battery + " кВт" }</span>
-          {' '}
           <span className="badge badge-price">{ car.price + " $" }</span>
-          {' '}
-          {' '}
         </h4>
         </section>
     
@@ -58,7 +48,6 @@ CarItem.propTypes = {
     odometer: PropTypes.string.isRequired,
     battery: PropTypes.number.isRequired,
     ac: PropTypes.bool.isRequired,
-  
     fav: PropTypes.string.isRequired,
     date_added: PropTypes.string.isRequired,
   }).isRequired,
