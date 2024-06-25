@@ -1,9 +1,11 @@
 import React, { useState, useRef, FormElement } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { addCar } from '../redux/actions';
+import { connect } from 'react-redux';
 
-function AddCar({ addCar, carData }) {
-    const make = useRef('');
+function AddCarContainer({ addCar, carData }) {
+  const make = useRef('');
   const model = useRef('');
   const year = useRef('');
   const color = useRef('');
@@ -13,7 +15,7 @@ function AddCar({ addCar, carData }) {
   const desc = useRef('');
   const maxCapacity = useRef('');
   const transmission = useRef('');
-  const imageUrl = useRef('');
+  const image_url = useRef('');
   const ac = useRef(false); // Initialize checkbox state to false
 
   const handleSubmit = (e) => {
@@ -30,19 +32,11 @@ function AddCar({ addCar, carData }) {
       desc: desc.current.value,
       maxCapacity: parseInt(maxCapacity.current.value), // Convert maxCapacity to number
       transmission: transmission.current.value,
-      imageUrl: imageUrl.current.value,
+      image_url: image_url.current.value,
       ac: ac.current.checked, // Get boolean value from checkbox
     };
-
-    addCar(newCar)
-      .then(() => {
-        // Handle successful car creation (e.g., redirect to car list)
-        console.log('Car added successfully!');
-      })
-      .catch((error) => {
-        console.error('Error adding car:', error);
-        // Handle errors during car creation (show error message)
-      });
+    console.log(addCar)
+    addCar(newCar);
   };
 
   // ... rest of the component (form elements & styling)
@@ -180,7 +174,7 @@ function AddCar({ addCar, carData }) {
             URL зображення:
           </label>
           <input
-            ref={imageUrl}
+            ref={image_url}
             type="text"
             id="imageUrl"
             name="imageUrl"
@@ -207,14 +201,21 @@ function AddCar({ addCar, carData }) {
 );
 }
 
-AddCar.propTypes = {
-  memberId: PropTypes.number.isRequired,
-  
-  onSubmitSuccess: PropTypes.func.isRequired,
-  onSubmitError: PropTypes.func,
+
+const mapStateToProps = state => ({
+  userData: state.user,
+});
+
+const mapDispatchToProps = dispatch => ({
+  addCar: info => dispatch(addCar(info)),
+});
+
+
+AddCarContainer.propTypes = {
+  addCar: PropTypes.func,
 };
 
-AddCar.defaultProps = {
+AddCarContainer.defaultProps = {
   onSubmitError: () => {},
 };
-export default (AddCar);
+export default connect(mapStateToProps, mapDispatchToProps) (AddCarContainer);
